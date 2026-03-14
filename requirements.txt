@@ -1,0 +1,7 @@
+pycryptodome==3.21.0
+pyaudio==0.2.14
+psutil==6.1.1
+Pillow==11.0.0
+pywin32==308
+pynput==1.7.7
+pyperclip==1.8.2
