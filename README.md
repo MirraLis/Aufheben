@@ -78,7 +78,8 @@ pip install pyinstaller
 ```
 
 **Important:** Persistence and elevation commands require a compiled `.exe`.
-However if you do want to run Aufheben_client.py without compiling to an `.exe` comment out the `self.migrate()` function
+However if you do want to run Aufheben_client.py without compiling to an `.exe` comment out the `self.migrate()` function.
+(You would need to have Loggers.py in the same directory in that case)
 
 ## Commands
 
