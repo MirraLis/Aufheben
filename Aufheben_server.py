@@ -166,7 +166,7 @@ class SingleServer:
               "record_mic ==> Record audio\n"
               "  Usage: record_mic <seconds>\n"
               f"{'-' * 64}\n"
-              "stop_recording ==> Stop ongoing recording\n"
+              "stop_recording ==> Stop ongoing recording\n"    # Does nothing. leftover feature.
               f"{'-' * 64}\n"
               "clear_logs ==> Clear Windows event logs (admin only)\n"
               f"{'-' * 64}\n"
@@ -545,7 +545,7 @@ class SingleServer:
                 elif command.startswith('record_mic'):
                     self.recv_recording(command)
 
-                elif command.startswith('stop_recording'):
+                elif command.startswith('stop_recording'):    # Does nothing. leftover feature.
                     if not self.recording.is_set():
                         print('[*] Not recording')
                         continue
